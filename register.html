@@ -4,33 +4,35 @@
 <meta charset="UTF-8">
 <title>愛宕音楽教室 - お申し込み・お問い合わせ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="愛宕音楽教室へのお申し込みやお問い合わせはこちらから。Googleフォームまたは公式LINEよりご連絡いただけます。無料体験レッスンも随時受付中！">
+<meta name="description" content="愛宕音楽教室へのお申し込みやお問い合わせはこちらから。24時間受付の便利なGoogleフォームより、無料体験レッスンも随時受付中！">
 <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
-/* Googleフォームボタン用の簡易追加スタイル（既存のCSSを邪魔しません） */
-.google-form-btn-area {
+/* Googleフォーム専用の、すっきりして目立つボタンのデザイン */
+.google-form-container {
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 20px;
     background: #f9f9f9;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    margin-top: 20px;
+    border: 2px dashed #ddd; /* 優しい印象の点線枠 */
+    border-radius: 8px;
+    margin: 30px 0;
 }
-.btn-google-form {
+.btn-google-form-main {
     display: inline-block;
-    background-color: #4caf50; /* 優しいグリーン。お好みの色に変えられます */
+    background-color: #4caf50; /* 親しみやすいグリーン */
     color: #ffffff !important;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    padding: 15px 30px;
+    padding: 18px 40px;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
-.btn-google-form:hover {
+.btn-google-form-main:hover {
     background-color: #45a049;
+    transform: translateY(-2px); /* ホバー時に少し浮き上がらせる演出 */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     text-decoration: none;
 }
 </style>
@@ -46,7 +48,7 @@
 	<ul>
 		<li><a href="about.html"><span class="line1"><span>教室</span>について</span><span class="line2">about</span></a></li>
 		<li><a href="lesson.html"><span class="line1"><span>レッスン</span>を見る</span><span class="line2">コース・料金・体験レッスンなど</span></a></li>
-		<li><a href="register.html"><span class="line1"><span>申し込み</span>をする</span><span class="line2">メール・公式LINE</span></a></li>
+		<li><a href="register.html"><span class="line1"><span>申し込み</span>をする</span><span class="line2">専用フォームへ</span></a></li>
 		<li><a href="access.html"><span class="line1"><span>アクセス・その他</span>について</span><span class="line2">マップ・規約など</span></a></li>
 	</ul>
 </nav>
@@ -60,59 +62,25 @@
 
 <section>
 <h2 class="h2-style-1"><i class="fas fa-paper-plane"></i> お申し込み・お問い合わせ</h2>
-<p>愛宕音楽教室へのお申し込み、無料体験レッスンのお問い合わせ、ご質問などはこちらから受け付けております。</p>
-<p>下記のお問い合わせ方法より、ご希望の方法をお選びください。</p>
-</section>
+<p>愛宕音楽教室へのお申し込み、無料体験レッスンのお問い合わせ、ご質問などはすべて下記の専用受付フォームにて承っております。</p>
+<p>24時間いつでも受付しておりますので、どうぞお気軽にご連絡ください。</p>
 
----
-
-<section id="mail_form">
-<h2 class="h2-style-1"><i class="fas fa-envelope"></i> 受付フォームでのお問い合わせ</h2>
-<p>体験レッスンのご予約やお問い合わせは、24時間受付の便利なGoogleフォームをご利用ください。<br>
-内容を確認後、通常3営業日以内にご連絡させていただきます。</p>
-
-<div class="google-form-btn-area">
-    <p style="margin-bottom: 20px;">「フォームを開く」ボタンを押すと、入力画面が新しいウィンドウで開きます。</p>
+<div class="google-form-container">
+    <p style="font-size: 1.1rem; margin-bottom: 20px; font-weight: bold;">
+        <i class="fas fa-info-circle"></i> ボタンを押すと、安全な入力画面が新しいウィンドウで開きます。
+    </p>
     
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSepaQgMrMZ2zo8VwfoALpf1dFnmJbwk_oiUqPW7_iTP0Ey7ow/viewform?usp=dialog" target="_blank" class="btn-google-form">
-        <i class="fas fa-edit"></i> 体験レッスン・お問い合わせフォームを開く
+    <a href="あなたのGoogleフォームのURL" target="_blank" class="btn-google-form-main">
+        <i class="fas fa-edit"></i> 体験レッスンに申し込む（Googleフォーム）
     </a>
     
-    <p class="note" style="margin-top: 15px; font-size: 0.85rem; color: #666;">
-        ※安心・安全なGoogle社の暗号化通信フォームへ移動します。<br>
-        ご入力いただいた個人情報は、お返事および教室の運営管理以外には一切使用いたしません。
+    <p class="note" style="margin-top: 20px; font-size: 0.85rem; color: #666; line-height: 1.6;">
+        ※安心・安全なGoogle社の暗号化通信フォームを利用しています。<br>
+        ご入力いただいた個人情報は、体験レッスンのご連絡および教室の運営管理以外には一切使用いたしません。
     </p>
 </div>
-</section>
 
----
-
-<section id="line_form">
-<h2 class="h2-style-1"><i class="fab fa-line"></i> 公式LINEでのお問い合わせ</h2>
-<p>LINE公式アカウントからもお気軽にお問い合わせいただけます。<br>
-1対1のチャット形式で、ご質問や体験レッスンの日程調整などがスムーズに行えます。お急ぎの方におすすめです。</p>
-
-<div class="line-qr-area">
-    <p>下記のQRコードを読み込むか、ボタンをタップして友だち追加してください。</p>
-    <img src="images/line_qr.png" alt="愛宕音楽教室 公式LINE QRコード">
-    <p class="center-btn">
-        <a href="https://line.me/R/ti/p/@your_line_id" target="_blank" class="btn-line">
-            <i class="fab fa-line"></i> LINEで友だち追加
-        </a>
-    </p>
-    <p class="note">※LINEアプリが起動します。</p>
-</div>
-</section>
-
----
-
-<section>
-<h2 class="h2-style-1"><i class="fas fa-phone-alt"></i> お電話でのお問い合わせ</h2>
-<p>お電話でもお問い合わせを受け付けております。</p>
-<p class="phone-number">
-    <a href="tel:00000000000"><i class="fas fa-phone"></i> 000-0000-0000</a>
-</p>
-<p class="note">受付時間：平日 10:00〜21:00 / 土日祝 10:00〜19:00（水曜定休）</p>
+<p>※内容を確認後、通常3営業日以内に先生のメールアドレスより折り返しご連絡させていただきます。</p>
 </section>
 
 </div>
@@ -124,9 +92,7 @@
 
 <nav>
 <ul class="submenu">
-<li><a href="#mail_form">受付フォーム</a></li>
-<li><a href="#line_form">公式LINE</a></li>
-<li><a href="#phone_number">お電話</a></li>
+<li><a href="register.html">専用受付フォーム</a></li>
 </ul>
 </nav>
 
@@ -152,7 +118,7 @@
 <div class="left">
 
     <h4 id="footer-logo"><img src="images/logo.png" alt="愛宕音楽教室"></h4>
-    <p>〒000-0000 福岡県福岡市西区愛宕...<br> 電話：000-0000-0000<br>
+    <p>〒000-0000 福岡県福岡市西区愛宕...<br>
     営業時間：平日 10:00〜21:00 / 土日祝 10:00〜19:00<br>
     定休日：毎週水曜日</p>
 
@@ -160,7 +126,9 @@
 <div class="right">
 
     <h4>アクセス</h4>
-    <p>地下鉄空港線「室見駅」より徒歩圏内</p> </div>
+    <p>地下鉄空港線「室見駅」より徒歩圏内</p>
+
+</div>
 </div>
 
 </div>
