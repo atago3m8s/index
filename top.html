@@ -8,7 +8,6 @@
     <style>
         body { font-family: 'Noto Sans JP', sans-serif; line-height: 2.0; color: #333; margin: 0; padding: 0; letter-spacing: 0.05em; background-color: #f9f7f5; }
         
-        /* ヘッダーの最適化 */
         header { text-align: center; padding: 120px 20px; }
         header h1 {
             font-family: 'Zen Maru Gothic', sans-serif;
@@ -24,7 +23,6 @@
         header h1::after { content: "♪"; position: absolute; top: -10px; right: -30px; font-size: 1.5rem; color: #c5a880; transform: rotate(20deg); }
         header h1:hover { transform: translateY(-5px) rotate(2deg); }
 
-        /* セクション：背景と余白の調整 */
         section { padding: 100px 20px; width: 100%; box-sizing: border-box; background-attachment: fixed; background-position: center; background-size: cover; min-height: 60vh; display: flex; align-items: center; justify-content: center; }
         .container { max-width: 800px; width: 100%; margin: 0 auto; }
 
@@ -39,24 +37,23 @@
         .price-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 1rem; }
         .price-table th, .price-table td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
 
-        /* 統一したボタンデザイン */
-        .btn-round {
+        /* ボタンデザイン（LINE用） */
+        .btn-line {
             display: inline-block;
-            background: #e6a0c0;
+            background: #06c755;
             color: #fff;
             padding: 15px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(230, 160, 192, 0.4);
+            box-shadow: 0 5px 15px rgba(6, 199, 85, 0.3);
         }
-        .btn-round:hover { background: #f0b9d2; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(230, 160, 192, 0.6); }
+        .btn-line:hover { background: #05b04a; transform: translateY(-3px); }
         .fixed-contact-btn { position: fixed; top: 20px; right: 20px; z-index: 10000; padding: 12px 25px; font-size: 0.9rem; }
 
         footer { text-align: center; padding: 60px 20px; color: #888; font-size: 0.9rem; background: #fff; }
 
-        /* スマホ向けの微調整 */
         @media (max-width: 600px) {
             header h1 { font-size: 2.0rem; }
             section { padding: 60px 20px; }
@@ -66,7 +63,7 @@
     </style>
 </head>
 <body>
-    <a href="YOUR_GOOGLE_FORM_URL" class="btn-round fixed-contact-btn">体験レッスン予約</a>
+    <a href="YOUR_LINE_URL" class="btn-line fixed-contact-btn">LINEで問い合わせ</a>
 
     <header>
         <h1>愛宕ピアノ教室</h1>
@@ -125,38 +122,21 @@
         <div class="container">
             <h2>アクセス</h2>
             <div class="card" style="text-align: center;">
-                <p><strong>愛宕ピアノ教室</strong><br>
-                福岡市西区愛宕◯丁目◯-◯</p>
-                <p>地下鉄空港線「室見駅」より徒歩5分<br>
-                ※駐車場あり（1台分）</p>
-                </div>
+                <p><strong>愛宕ピアノ教室</strong><br>福岡市西区愛宕◯丁目◯-◯</p>
+                <p>地下鉄空港線「室見駅」より徒歩5分<br>※駐車場あり（1台分）</p>
+            </div>
         </div>
     </section>
 
     <section id="contact">
         <div class="container" style="text-align: center;">
-            <h2 style="margin-bottom: 30px;">無料体験レッスン</h2>
-            <a href="YOUR_GOOGLE_FORM_URL" class="btn-round">体験レッスンに申し込む</a>
-        </div>
-    </section>
-    
-    <section id="flow">
-        <div class="container">
-            <h2>お問い合わせからの流れ</h2>
-            <div class="grid">
-                <div class="card">
-                    <p style="font-size: 1.5rem; color: #e6a0c0; font-weight: bold;">01</p>
-                    <p><strong>体験レッスン予約</strong><br>お申し込みフォームからご希望の日時を選択してください。</p>
-                </div>
-                <div class="card">
-                    <p style="font-size: 1.5rem; color: #e6a0c0; font-weight: bold;">02</p>
-                    <p><strong>ヒアリング・体験</strong><br>ご要望を伺いながら、実際のレッスンを体験していただきます。</p>
-                </div>
-                <div class="card">
-                    <p style="font-size: 1.5rem; color: #e6a0c0; font-weight: bold;">03</p>
-                    <p><strong>ご入会手続き</strong><br>雰囲気や指導方針にご納得いただけましたら、正式にご入会となります。</p>
-                </div>
-            </div>
+            <h2 style="margin-bottom: 30px;">体験レッスン・お問い合わせ</h2>
+            <p style="margin-bottom: 30px;">
+                体験レッスンのお申し込みやご質問は、<br>
+                LINE公式アカウントよりお気軽にご連絡ください。<br>
+                下のボタンをタップして「友だち追加」をお願いします。
+            </p>
+            <a href="YOUR_LINE_URL" class="btn-line">LINE公式アカウントへ</a>
         </div>
     </section>
 
