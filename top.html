@@ -58,47 +58,37 @@
             background: #f0b9d2; /* ホバー時は明るいピンクに */
         }        
         footer { text-align: center; padding: 60px 20px; color: #888; font-size: 0.8rem; }
-        /* 右上固定ボタンのデザイン（丸型） */
+        /* 丸くて可愛い共通ボタンスタイル */
+        .btn-round {
+            display: inline-block;
+            background: #e6a0c0; /* 上品なピンク */
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px; /* 綺麗な丸み */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(230, 160, 192, 0.3);
+        }
+
+        .btn-round:hover {
+            background: #f0b9d2;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(230, 160, 192, 0.4);
+        }
+
+        /* 右上専用の配置設定 */
         .fixed-contact-btn {
             position: fixed;
             top: 20px;
             right: 20px;
             z-index: 10000;
-            
-            background: #333;
-            color: #fff;
-            padding: 15px 25px; /* パディングを調整して形を整える */
-            font-size: 0.8rem;
-            text-decoration: none;
-            letter-spacing: 0.1em;
-            transition: 0.3s;
-            
-            /* ここがポイント：角を丸くする設定 */
-            border-radius: 50px; 
-            
-            /* 必要であれば影をつけて、浮かんでいる感じを出す */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        }
-
-        .fixed-contact-btn:hover {
-            background: #555;
-            /* ホバーした時に少し上に動くとおしゃれです */
-            transform: translateY(-2px);
-        }
-
-        /* スマホで見た時の調整 */
-        @media (max-width: 600px) {
-            .fixed-contact-btn {
-                top: 15px;
-                right: 15px;
-                padding: 12px 20px;
-                font-size: 0.7rem;
-            }
         }
     </style>
 </head>
 <body>
-    <a href="YOUR_GOOGLE_FORM_URL" class="fixed-contact-btn">体験レッスン予約</a>
+    <a href="YOUR_GOOGLE_FORM_URL" class="btn-round fixed-contact-btn">体験レッスン予約</a>
 
 <header>
     <h1>愛宕ピアノ教室</h1>
@@ -144,9 +134,9 @@
 </section>
 
 <section id="contact">
-    <div class="container">
+    <div class="container" style="text-align: center;">
         <h2>無料体験レッスン</h2>
-        <a href="YOUR_GOOGLE_FORM_URL" class="btn-primary">体験レッスンに申し込む</a>
+        <a href="YOUR_GOOGLE_FORM_URL" class="btn-round">体験レッスンに申し込む</a>
     </div>
 </section>
 
