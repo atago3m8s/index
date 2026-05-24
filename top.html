@@ -6,143 +6,120 @@
     <title>愛宕ピアノ教室｜福岡市西区の個人ピアノ教室</title>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Noto Sans JP', sans-serif; line-height: 2.0; color: #333; margin: 0; padding: 0; letter-spacing: 0.05em; }
-        header { text-align: center; padding: 100px 20px; }
+        body { font-family: 'Noto Sans JP', sans-serif; line-height: 2.0; color: #333; margin: 0; padding: 0; letter-spacing: 0.05em; background-color: #f9f7f5; }
+        
+        /* ヘッダーの最適化 */
+        header { text-align: center; padding: 120px 20px; }
         header h1 {
-            font-family: 'Zen Maru Gothic', sans-serif; /* 丸ゴシック体でポップに */
+            font-family: 'Zen Maru Gothic', sans-serif;
             font-size: 2.8rem;
             font-weight: 700;
-            color: #e6a0c0; /* 上品なピンク色に変更 */
-            letter-spacing: 0.05em;
+            color: #e6a0c0;
+            margin-bottom: 10px;
             position: relative;
             display: inline-block;
             transition: transform 0.3s;
-            /* ほんのり影をつけて立体感を出す */
             text-shadow: 2px 2px 0px rgba(255,255,255,0.8);
         }
-        header h1::after {
-            content: "♪";
-            position: absolute;
-            top: -10px;
-            right: -30px;
-            font-size: 1.5rem;
-            color: #c5a880;
-            transform: rotate(20deg);
-        }
-        header h1:hover {
-            transform: translateY(-5px) rotate(2deg); /* ふわっと浮き上がる */
-        }
-        section { padding: 100px 20px; width: 100%; box-sizing: border-box; background-attachment: fixed; background-position: center; background-size: cover; }
-        .container { max-width: 800px; margin: 0 auto; }
+        header h1::after { content: "♪"; position: absolute; top: -10px; right: -30px; font-size: 1.5rem; color: #c5a880; transform: rotate(20deg); }
+        header h1:hover { transform: translateY(-5px) rotate(2deg); }
 
-        #about { background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('images/1.jpg'); }
-        #features { background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('images/2.jpg'); }
-        #lesson { background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('images/3.jpg'); }
+        /* セクション：背景と余白の調整 */
+        section { padding: 100px 20px; width: 100%; box-sizing: border-box; background-attachment: fixed; background-position: center; background-size: cover; min-height: 60vh; display: flex; align-items: center; justify-content: center; }
+        .container { max-width: 800px; width: 100%; margin: 0 auto; }
 
-        h2 { font-size: 1.2rem; text-align: center; font-weight: 400; margin-bottom: 50px; letter-spacing: 0.2em; }
-        .card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 40px;
-            border-radius: 30px; /* 角丸を大きくする */
-            box-shadow: 0 10px 20px rgba(230, 160, 192, 0.1); /* ピンク系の影で柔らかく */
-        }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; margin-top: 30px; }
-        .price-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
-        .price-table th, .price-table td { padding: 12px 0; border-bottom: 1px solid #e0e0e0; text-align: left; }
-        .btn-primary {
-            background: #e6a0c0; /* ピンク色に */
-            border-radius: 50px; /* 完全に丸いボタンに */
-            border: none;
-        }
-        .btn-primary:hover {
-            background: #f0b9d2; /* ホバー時は明るいピンクに */
-        }        
-        footer { text-align: center; padding: 60px 20px; color: #888; font-size: 0.8rem; }
-        /* 丸くて可愛い共通ボタンスタイル */
+        #about { background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('images/1.jpg'); }
+        #features { background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('images/2.jpg'); }
+        #lesson { background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('images/3.jpg'); }
+
+        h2 { font-size: 1.4rem; text-align: center; font-weight: 400; margin-bottom: 50px; letter-spacing: 0.2em; color: #555; }
+        .card { background: rgba(255, 255, 255, 0.9); padding: 50px; border-radius: 40px; box-shadow: 0 10px 25px rgba(230, 160, 192, 0.15); }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+        .price-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 1rem; }
+        .price-table th, .price-table td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+
+        /* 統一したボタンデザイン */
         .btn-round {
             display: inline-block;
-            background: #e6a0c0; /* 上品なピンク */
+            background: #e6a0c0;
             color: #fff;
-            padding: 12px 30px;
-            border-radius: 50px; /* 綺麗な丸み */
+            padding: 15px 40px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 0.9rem;
             transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(230, 160, 192, 0.3);
+            box-shadow: 0 5px 15px rgba(230, 160, 192, 0.4);
         }
+        .btn-round:hover { background: #f0b9d2; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(230, 160, 192, 0.6); }
+        .fixed-contact-btn { position: fixed; top: 20px; right: 20px; z-index: 10000; padding: 12px 25px; font-size: 0.9rem; }
 
-        .btn-round:hover {
-            background: #f0b9d2;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(230, 160, 192, 0.4);
-        }
+        footer { text-align: center; padding: 60px 20px; color: #888; font-size: 0.9rem; background: #fff; }
 
-        /* 右上専用の配置設定 */
-        .fixed-contact-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 10000;
+        /* スマホ向けの微調整 */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.0rem; }
+            section { padding: 60px 20px; }
+            .card { padding: 30px; border-radius: 20px; }
+            .fixed-contact-btn { top: 10px; right: 10px; padding: 8px 15px; font-size: 0.75rem; }
         }
     </style>
 </head>
 <body>
     <a href="YOUR_GOOGLE_FORM_URL" class="btn-round fixed-contact-btn">体験レッスン予約</a>
 
-<header>
-    <h1>愛宕ピアノ教室</h1>
-    <p>福岡市西区で心豊かな音楽の時間を。</p>
-</header>
+    <header>
+        <h1>愛宕ピアノ教室</h1>
+        <p>福岡市西区で心豊かな音楽の時間を。</p>
+    </header>
 
-<section id="about">
-    <div class="container">
-        <h2>教室について</h2>
-        <div class="card">
-            <p>「音楽を通じて、心豊かな人生を育む」ことを理念としています。一人ひとりの個性と目標に寄り添い、丁寧な指導を心がけています。</p>
-            <p style="margin-top: 20px;"><strong>講師：田中 太郎</strong><br>音楽大学卒業。国内外のコンクールでの受賞歴を活かし、初心者から専門家まで指導しています。</p>
-        </div>
-    </div>
-</section>
-
-<section id="features">
-    <div class="container">
-        <h2>教室の特長 <span style="font-size: 1.5rem;">♪</span></h2>
-        <div class="card">
-            <div class="grid">
-                <div><strong>01. 個別指導</strong><br>オーダーメイドレッスン</div>
-                <div><strong>02. 環境</strong><br>一軒家の本格的な空間</div>
-                <div><strong>03. 成長</strong><br>定期発表会で成果を披露</div>
+    <section id="about">
+        <div class="container">
+            <h2>教室について</h2>
+            <div class="card">
+                <p>「音楽を通じて、心豊かな人生を育む」ことを理念としています。一人ひとりの個性と目標に寄り添い、丁寧な指導を心がけています。</p>
+                <p style="margin-top: 20px;"><strong>講師：田中 太郎</strong><br>音楽大学卒業。国内外のコンクールでの受賞歴を活かし、初心者から専門家まで指導しています。</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="lesson">
-    <div class="container">
-        <h2>レッスン料金</h2>
-        <div class="card">
-            <p style="text-align: center; font-size: 0.9rem;">入会金：5,000円（税込）</p>
-            <table class="price-table">
-                <tr><th>コース</th><th>月謝（税込）</th></tr>
-                <tr><td>ピアノ（30分）</td><td>7,500円</td></tr>
-                <tr><td>ピアノ（45分）</td><td>9,500円</td></tr>
-                <tr><td>幼児音楽</td><td>6,000円</td></tr>
-            </table>
+    <section id="features">
+        <div class="container">
+            <h2>教室の特長 <span style="font-size: 1.2rem;">♪</span></h2>
+            <div class="card">
+                <div class="grid">
+                    <div><strong>01. 個別指導</strong><br>オーダーメイドの丁寧なレッスン</div>
+                    <div><strong>02. 環境</strong><br>一軒家の本格的な空間とグランドピアノ</div>
+                    <div><strong>03. 成長</strong><br>年1回の発表会で成果を披露</div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="contact">
-    <div class="container" style="text-align: center;">
-        <h2>無料体験レッスン</h2>
-        <a href="YOUR_GOOGLE_FORM_URL" class="btn-round">体験レッスンに申し込む</a>
-    </div>
-</section>
+    <section id="lesson">
+        <div class="container">
+            <h2>レッスン料金</h2>
+            <div class="card">
+                <p style="text-align: center; font-size: 0.9rem;">入会金：5,000円（税込）</p>
+                <table class="price-table">
+                    <tr><th>コース</th><th>月謝（税込）</th></tr>
+                    <tr><td>ピアノ（30分）</td><td>7,500円</td></tr>
+                    <tr><td>ピアノ（45分）</td><td>9,500円</td></tr>
+                    <tr><td>幼児音楽</td><td>6,000円</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
 
-<footer>
-    <p>福岡市西区愛宕｜地下鉄「室見駅」より徒歩5分</p>
-</footer>
+    <section id="contact">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 30px;">無料体験レッスン</h2>
+            <a href="YOUR_GOOGLE_FORM_URL" class="btn-round">体験レッスンに申し込む</a>
+        </div>
+    </section>
 
+    <footer>
+        <p>福岡市西区愛宕｜地下鉄「室見駅」より徒歩5分</p>
+    </footer>
 </body>
 </html>
