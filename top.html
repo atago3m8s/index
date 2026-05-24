@@ -33,15 +33,21 @@
         /* セクション：最大幅を制限して崩れを防ぐ
         section { padding: 80px 20px; max-width: 600px; margin: auto; } */
         
-        /* 各セクションを背景切り替えのエリアにする */
+        //* 1. sectionは背景を広げるため、最大幅の制限をなくします */
         section {
             padding: 100px 20px;
-            max-width: 600px;
-            margin: auto;
-            /* 背景画像をセクションごとに設定し、固定する */
+            /* max-width: 600px;  <-- これを削除または拡大 */
+            width: 100%;        /* 画面いっぱいに広げる */
+            box-sizing: border-box; /* パディングを含めてサイズ計算 */
             background-attachment: fixed;
             background-position: center;
             background-size: cover;
+        }
+
+        /* 2. 中身のコンテンツだけを中央に寄せるための容器を作る */
+        .container {
+            max-width: 800px;   /* 文字の読みやすさを保つ幅 */
+            margin: 0 auto;     /* 中央寄せ */
         }
 
         /* セクションごとの背景設定 */
@@ -86,20 +92,19 @@
     <p>福岡市西区で心豊かな音楽の時間を。</p>
 </header>
 
-<section id="about">
-    <h2>教室について</h2>
-    <div class="card">
-        <p>「音楽を通じて、心豊かな人生を育む」ことを理念としています。一人ひとりの個性と目標に寄り添い、丁寧な指導を心がけています。</p>
-        <p style="margin-top: 20px;"><strong>講師：田中 太郎</strong><br>音楽大学卒業。国内外のコンクールでの受賞歴を活かし、初心者から専門家まで指導しています。</p>
+<<section id="about">
+    <div class="container">
+        <h2>教室について</h2>
+        <div class="card">
+            </div>
     </div>
 </section>
 
 <section id="features">
-    <h2>教室の特長</h2>
-    <div class="grid">
-        <div><strong>01. 個別指導</strong><br>一人ひとりに合わせたオーダーメイドレッスン</div>
-        <div><strong>02. 環境</strong><br>一軒家の落ち着いた空間とグランドピアノ</div>
-        <div><strong>03. 成長</strong><br>定期発表会で成果を披露</div>
+    <div class="container">
+        <h2>教室の特長</h2>
+        <div class="grid">
+            </div>
     </div>
 </section>
 
@@ -127,4 +132,5 @@
 </footer>
 
 </body>
+<!-- <div class="fixed-background"></div> -->
 </html>
