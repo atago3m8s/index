@@ -32,29 +32,14 @@
         #lesson { background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('images/3.jpg'); }
 
         h2 { font-size: 1.4rem; text-align: center; font-weight: 400; margin-bottom: 50px; letter-spacing: 0.2em; color: #555; }
-        h2 i {
-            color: #c5a880; /* 少し落ち着いたゴールドベージュ */
-            margin-right: 10px; /* 文字との間隔を空ける */
-            font-size: 0.9em; /* 文字より少し小さめにすると洗練されます */
-        }
+        h2 i { color: #e6a0c0; margin-right: 10px; }
         .card { background: rgba(255, 255, 255, 0.9); padding: 50px; border-radius: 40px; box-shadow: 0 10px 25px rgba(230, 160, 192, 0.15); }
         
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
         .price-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 1rem; }
         .price-table th, .price-table td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
 
-        /* ボタンデザイン（LINE用） */
-        .btn-line {
-            display: inline-block;
-            background: #06c755;
-            color: #fff;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(6, 199, 85, 0.3);
-        }
+        .btn-line { display: inline-block; background: #06c755; color: #fff; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 5px 15px rgba(6, 199, 85, 0.3); }
         .btn-line:hover { background: #05b04a; transform: translateY(-3px); }
         .fixed-contact-btn { position: fixed; top: 20px; right: 20px; z-index: 10000; padding: 12px 25px; font-size: 0.9rem; }
 
@@ -69,7 +54,7 @@
     </style>
 </head>
 <body>
-    <a href="YOUR_LINE_URL" class="btn-line fixed-contact-btn">LINEで問い合わせ</a>
+    <a href="YOUR_LINE_URL" class="btn-line fixed-contact-btn"><i class="fab fa-line"></i> LINEで問い合わせ</a>
 
     <header>
         <h1>愛宕ピアノ教室</h1>
@@ -81,19 +66,19 @@
             <h2><i class="fa-solid fa-music"></i> 教室について</h2>
             <div class="card">
                 <p>「音楽を通じて、心豊かな人生を育む」ことを理念としています。一人ひとりの個性と目標に寄り添い、丁寧な指導を心がけています。</p>
-                <p style="margin-top: 20px;"><strong>講師：田中 太郎</strong><br>音楽大学卒業。国内外のコンクールでの受賞歴を活かし、初心者から専門家まで指導しています。</p>
+                <p style="margin-top: 20px;"><strong><i class="fa-solid fa-user-tie"></i> 講師：田中 太郎</strong><br>音楽大学卒業。国内外のコンクールでの受賞歴を活かし、初心者から専門家まで指導しています。</p>
             </div>
         </div>
     </section>
 
     <section id="features">
         <div class="container">
-            <h2>教室の特長 <span style="font-size: 1.2rem;">♪</span></h2>
+            <h2><i class="fa-solid fa-star"></i> 教室の特長</h2>
             <div class="card">
                 <div class="grid">
-                    <div><strong>01. 個別指導</strong><br>オーダーメイドの丁寧なレッスン</div>
-                    <div><strong>02. 環境</strong><br>一軒家の本格的な空間とグランドピアノ</div>
-                    <div><strong>03. 成長</strong><br>年1回の発表会で成果を披露</div>
+                    <div><strong>01. <i class="fa-solid fa-hand-holding-heart"></i> 個別指導</strong><br>オーダーメイドの丁寧なレッスン</div>
+                    <div><strong>02. <i class="fa-solid fa-house-chimney"></i> 環境</strong><br>一軒家の本格的な空間とグランドピアノ</div>
+                    <div><strong>03. <i class="fa-solid fa-microphone-lines"></i> 成長</strong><br>年1回の発表会で成果を披露</div>
                 </div>
             </div>
         </div>
@@ -101,11 +86,11 @@
 
     <section id="lesson">
         <div class="container">
-            <h2>レッスン料金</h2>
+            <h2><i class="fa-solid fa-file-invoice-dollar"></i> レッスン料金</h2>
             <div class="card">
                 <p style="text-align: center; font-size: 0.9rem;">入会金：5,000円（税込）</p>
                 <table class="price-table">
-                    <tr><th>コース</th><th>月謝（税込）</th></tr>
+                    <tr><th><i class="fa-solid fa-piano"></i> コース</th><th>月謝（税込）</th></tr>
                     <tr><td>ピアノ（30分）</td><td>7,500円</td></tr>
                     <tr><td>ピアノ（45分）</td><td>9,500円</td></tr>
                     <tr><td>幼児音楽</td><td>6,000円</td></tr>
@@ -116,7 +101,7 @@
 
     <section id="teacher">
         <div class="container">
-            <h2>講師紹介</h2>
+            <h2><i class="fa-solid fa-user-graduate"></i> 講師紹介</h2>
             <div class="card">
                 <p><strong>田中 太郎 (Tanaka Taro)</strong></p>
                 <p>音楽大学卒業後、国内外のコンクールで多数受賞。現在は演奏活動を行う傍ら、後進の指導にも力を入れています。「音楽を一生の楽しみに」をモットーに、小さなお子様から大人の方まで、一人ひとりの感性を大切にしたレッスンを心がけています。</p>
@@ -126,28 +111,29 @@
 
     <section id="access">
         <div class="container">
-            <h2>アクセス</h2>
+            <h2><i class="fa-solid fa-location-dot"></i> アクセス</h2>
             <div class="card" style="text-align: center;">
                 <p><strong>愛宕ピアノ教室</strong><br>福岡市西区愛宕◯丁目◯-◯</p>
-                <p>地下鉄空港線「室見駅」より徒歩5分<br>※駐車場あり（1台分）</p>
+                <p><i class="fa-solid fa-train-subway"></i> 地下鉄空港線「室見駅」より徒歩5分<br>
+                <i class="fa-solid fa-square-parking"></i> ※駐車場あり（1台分）</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <div class="container" style="text-align: center;">
-            <h2 style="margin-bottom: 30px;">体験レッスン・お問い合わせ</h2>
+            <h2 style="margin-bottom: 30px;"><i class="fa-solid fa-envelope"></i> 体験レッスン・お問い合わせ</h2>
             <p style="margin-bottom: 30px;">
                 体験レッスンのお申し込みやご質問は、<br>
                 LINE公式アカウントよりお気軽にご連絡ください。<br>
                 下のボタンをタップして「友だち追加」をお願いします。
             </p>
-            <a href="YOUR_LINE_URL" class="btn-line">LINE公式アカウントへ</a>
+            <a href="YOUR_LINE_URL" class="btn-line"><i class="fab fa-line"></i> LINE公式アカウントへ</a>
         </div>
     </section>
 
     <footer>
-        <p>福岡市西区愛宕｜地下鉄「室見駅」より徒歩5分</p>
+        <p><i class="fa-solid fa-location-dot"></i> 福岡市西区愛宕｜地下鉄「室見駅」より徒歩5分</p>
     </footer>
 </body>
 </html>
