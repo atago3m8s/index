@@ -24,32 +24,40 @@
         .price-table th, .price-table td { padding: 12px 0; border-bottom: 1px solid #e0e0e0; text-align: left; }
         .btn-primary { display: block; background: #333; color: #fff; text-align: center; padding: 15px; text-decoration: none; max-width: 250px; margin: 40px auto; }
         footer { text-align: center; padding: 60px 20px; color: #888; font-size: 0.8rem; }
-        /* 右上固定ボタンのデザイン */
+        /* 右上固定ボタンのデザイン（丸型） */
         .fixed-contact-btn {
-            position: fixed;     /* 画面上の位置を固定 */
-            top: 20px;           /* 上からの距離 */
-            right: 20px;         /* 右からの距離 */
-            z-index: 10000;      /* 最前面に表示 */
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10000;
             
-            background: #333;    /* ボタンの色 */
-            color: #fff;         /* 文字の色 */
-            padding: 10px 20px;  /* 余白 */
-            font-size: 0.8rem;   /* 少し小さめで上品に */
+            background: #333;
+            color: #fff;
+            padding: 15px 25px; /* パディングを調整して形を整える */
+            font-size: 0.8rem;
             text-decoration: none;
             letter-spacing: 0.1em;
-            transition: 0.3s;    /* ホバー時の動きを滑らかに */
+            transition: 0.3s;
+            
+            /* ここがポイント：角を丸くする設定 */
+            border-radius: 50px; 
+            
+            /* 必要であれば影をつけて、浮かんでいる感じを出す */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
 
         .fixed-contact-btn:hover {
-            background: #555;    /* マウスを乗せた時の色 */
+            background: #555;
+            /* ホバーした時に少し上に動くとおしゃれです */
+            transform: translateY(-2px);
         }
 
-        /* スマホで見た時の調整（少しコンパクトにします） */
+        /* スマホで見た時の調整 */
         @media (max-width: 600px) {
             .fixed-contact-btn {
-                top: 10px;
-                right: 10px;
-                padding: 8px 12px;
+                top: 15px;
+                right: 15px;
+                padding: 12px 20px;
                 font-size: 0.7rem;
             }
         }
