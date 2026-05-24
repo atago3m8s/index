@@ -9,7 +9,14 @@
     <style>
         body { font-family: 'Noto Sans JP', sans-serif; line-height: 2.0; color: #333; margin: 0; padding: 0; letter-spacing: 0.05em; background-color: #f9f7f5; }
         
-        header { text-align: center; padding: 120px 20px; }
+        /* headerのスタイルを以下のように更新 */
+        header {
+            text-align: center;
+            padding: 150px 20px;
+            background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('images/main-visual.jpg');
+            background-size: cover;
+            background-position: center;
+        }
         header h1 {
             font-family: 'Zen Maru Gothic', sans-serif;
             font-size: 2.8rem;
@@ -78,6 +85,19 @@
             .card { padding: 30px; border-radius: 20px; }
             .fixed-contact-btn { width: 50px; height: 50px; font-size: 1.2rem; }
         }
+        .header-icons {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #e6a0c0;
+        }
+        .header-icons i {
+            margin: 0 10px;
+            animation: float 2s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
     </style>
 </head>
 <body>
@@ -87,7 +107,13 @@
     </a>
     <header>
         <h1>愛宕ピアノ教室</h1>
-        <p>福岡市西区で心豊かな音楽の時間を。</p>
+        <div class="header-icons">
+            <i class="fa-solid fa-music"></i>
+            <i class="fa-solid fa-piano"></i>
+            <i class="fa-solid fa-music"></i>
+        </div>
+        <p style="font-size: 1.2rem; margin-top: 20px;">福岡市西区で心豊かな音楽の時間を。</p>
+        <p style="color: #c5a880;">はじめてのピアノから、大人の方の趣味まで。</p>
     </header>
 
     <section id="about">
