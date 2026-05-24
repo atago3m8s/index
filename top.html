@@ -35,7 +35,11 @@
             background: rgba(255, 255, 255, 0.5);
         }
 
-        header h1 { font-size: 3rem; margin-bottom: 10px; color: var(--text-color); }
+        hheader h1 { 
+    /* 影の濃さを上げて、はっきりさせます */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); 
+            font-weight: 700; /* 数字を700以上にすると太字になります */
+        }
         header p { font-size: 1.2rem; letter-spacing: 0.1em; opacity: 0.8; }
 
         section { padding: 80px 20px; max-width: 900px; margin: auto; }
@@ -94,8 +98,10 @@
 <body>
 
 <header>
-    <h1>愛宕ピアノ教室</h1>
-    <p>福岡市西区で心豊かな音楽の時間を。</p>
+    <div class="card" style="display: inline-block; padding: 20px 40px;">
+        <h1>愛宕ピアノ教室</h1>
+        <p>福岡市西区で心豊かな音楽の時間を。</p>
+    </div>
 </header>
 
 <section id="about">
