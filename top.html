@@ -8,90 +8,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
     <style>
-        :root {
-            --bg-color: #fcfbf7; /* 上品なクリーム色 */
-            --accent-color: #c5a880; /* ゴールドブラウン */
-            --text-color: #4a453f; /* 濃いブラウン */
-            --white: #ffffff;
-        }
-
+        /* 全体：ゆったりとした余白と洗練されたフォント */
         body {
-        /* 画像を背景に設定 */
-        background-image: url('images/3.jpg');
-        background-size: cover;        /* 画面全体に広げる */
-        background-position: center;   /* 中央に配置 */
-        background-attachment: fixed;  /* スクロールしても背景を固定する（おしゃれに見える！） */
-        
-        /* 背景の上に薄い白いフィルターをかける（文字を読みやすくする） */
-        background-color: rgba(255, 255, 255, 0.7); 
-        background-blend-mode: lighten;
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 2.0; /* 行間を広げると洗練されます */
+            color: #333;
+            background-color: #f9f7f5; /* NONJOHNに近い淡い紙のような色 */
+            letter-spacing: 0.05em;
         }
-
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-
-        header { 
-            text-align: center; 
-            padding: 80px 20px; 
-            background: rgba(255, 255, 255, 0.5);
+    
+        /* ヘッダー：ロゴを際立たせる */
+        header {
+            text-align: center;
+            padding: 120px 20px;
         }
-
-        hheader h1 { 
-    /* 影の濃さを上げて、はっきりさせます */
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); 
-            font-weight: 700; /* 数字を700以上にすると太字になります */
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.2em; /* 文字間隔を広げるとプロっぽくなります */
         }
-        header p { font-size: 1.2rem; letter-spacing: 0.1em; opacity: 0.8; }
-
-        section { padding: 80px 20px; max-width: 900px; margin: auto; }
-        
-        h2 { 
-            text-align: center; 
-            font-size: 2rem; 
-            margin-bottom: 50px; 
-            position: relative;
+    
+        /* セクション：線で区切らず「余白」で区切る */
+        section {
+            padding: 100px 20px;
+            max-width: 800px;
+            margin: auto;
         }
-        h2::after { 
-            content: ""; 
-            display: block; 
-            width: 50px; 
-            height: 2px; 
-            background: var(--accent-color); 
-            margin: 15px auto 0; 
+        h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 60px;
+            letter-spacing: 0.1em;
         }
-
-        .card { 
-            background: var(--white); 
-            padding: 40px; 
-            border-radius: 15px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
+    
+        /* カードデザイン：枠線を消してスッキリと */
+        .card {
+            background: transparent; /* 背景色を透明に */
+            padding: 0;
+            box-shadow: none;        /* 影を消す */
+            border-bottom: 1px solid #e0e0e0; /* 下線だけで区切る */
+            padding-bottom: 40px;
         }
-
-        .price-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        .price-table th, .price-table td { padding: 15px; border-bottom: 1px solid #eee; }
-        .price-table th { color: var(--accent-color); font-weight: bold; }
-
-        .btn-primary { 
-            display: block; 
-            background: var(--accent-color); 
-            color: #fff; 
-            text-align: center; 
-            padding: 20px; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            font-weight: bold; 
-            transition: 0.3s;
-            max-width: 400px;
-            margin: 40px auto;
-        }
-        .btn-primary:hover { background: #b0936c; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-
-        footer { 
-            text-align: center; 
-            padding: 60px 20px; 
-            background: #f1ede9; 
-            color: var(--text-color); 
-            font-size: 0.9rem;
+    
+        /* ボタン：シンプルに */
+        .btn-primary {
+            background: #333; /* 黒に近い色で引き締める */
+            color: #fff;
+            border-radius: 0; /* 角を四角にするのがNONJOHN流 */
+            padding: 15px 40px;
+            max-width: 250px;
         }
     </style>
 </head>
