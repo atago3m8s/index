@@ -41,21 +41,50 @@
 
         .btn-line { display: inline-block; background: #06c755; color: #fff; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 5px 15px rgba(6, 199, 85, 0.3); }
         .btn-line:hover { background: #05b04a; transform: translateY(-3px); }
-        .fixed-contact-btn { position: fixed; top: 20px; right: 20px; z-index: 10000; padding: 12px 25px; font-size: 0.9rem; }
+        /* 右上の丸いLINEボタン */
+        .fixed-contact-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10000;
+            
+            /* 正円にする設定 */
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            
+            /* アイコンを中心にする設定 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            background: #06c755;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5rem; /* アイコンの大きさ */
+            box-shadow: 0 4px 10px rgba(6, 199, 85, 0.4);
+            transition: 0.3s;
+        }
 
+        .fixed-contact-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            background: #05b04a;
+        }
         footer { text-align: center; padding: 60px 20px; color: #888; font-size: 0.9rem; background: #fff; }
 
         @media (max-width: 600px) {
             header h1 { font-size: 2.0rem; }
             section { padding: 60px 20px; }
             .card { padding: 30px; border-radius: 20px; }
-            .fixed-contact-btn { top: 10px; right: 10px; padding: 8px 15px; font-size: 0.75rem; }
+            .fixed-contact-btn { width: 50px; height: 50px; font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
-    <a href="YOUR_LINE_URL" class="btn-line fixed-contact-btn"><i class="fab fa-line"></i> LINEで問い合わせ</a>
-
+    <!-- 修正後：アイコンのみの丸いボタン -->
+    <a href="YOUR_LINE_URL" class="fixed-contact-btn" title="LINEで問い合わせ">
+        <i class="fab fa-line"></i>
+    </a>
     <header>
         <h1>愛宕ピアノ教室</h1>
         <p>福岡市西区で心豊かな音楽の時間を。</p>
