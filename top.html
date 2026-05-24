@@ -7,11 +7,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         /* 基本スタイル：全デバイスで崩れないように設定 */
-        body {
+        /* body {
             font-family: 'Noto Sans JP', sans-serif;
             line-height: 2.0;
             color: #333;
             background-color: #f9f7f5;
+            margin: 0;
+            padding: 0;
+            letter-spacing: 0.05em;
+        } */
+
+        /* 背景の設定：各セクションに背景を持たせるため、bodyからは削除 */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 2.0;
+            color: #333;
             margin: 0;
             padding: 0;
             letter-spacing: 0.05em;
@@ -20,12 +30,35 @@
         header { text-align: center; padding: 100px 20px; }
         header h1 { font-size: 2rem; font-weight: 300; letter-spacing: 0.2em; margin-bottom: 10px; }
 
-        /* セクション：最大幅を制限して崩れを防ぐ */
-        section { padding: 80px 20px; max-width: 600px; margin: auto; }
+        /* セクション：最大幅を制限して崩れを防ぐ
+        section { padding: 80px 20px; max-width: 600px; margin: auto; } */
         
+        /* 各セクションを背景切り替えのエリアにする */
+        section {
+            padding: 100px 20px;
+            max-width: 600px;
+            margin: auto;
+            /* 背景画像をセクションごとに設定し、固定する */
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* セクションごとの背景設定 */
+        #about { background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('images/bg1.jpg'); }
+        #features { background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('images/bg2.jpg'); }
+        #lesson { background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('images/bg3.jpg'); }
+
         h2 { font-size: 1.2rem; text-align: center; font-weight: 400; margin-bottom: 50px; letter-spacing: 0.2em; }
 
-        .card { border-bottom: 1px solid #e0e0e0; padding-bottom: 40px; }
+        /* .card { border-bottom: 1px solid #e0e0e0; padding-bottom: 40px; } */
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
 
         /* グリッド：スマホで縦並び、PCで横並び */
         .grid {
