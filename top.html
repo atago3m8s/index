@@ -16,7 +16,14 @@
             background-color: #f9f7f5; /* NONJOHNに近い淡い紙のような色 */
             letter-spacing: 0.05em;
         }
-    
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3つ横並び */
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+
         /* ヘッダー：ロゴを際立たせる */
         header {
             text-align: center;
@@ -59,6 +66,33 @@
             padding: 15px 40px;
             max-width: 250px;
         }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3つ横並び */
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 100px 20px; /* 余白を広げる */
+            border-top: 1px solid #e0e0e0;
+            color: #333;
+        }
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr; /* スマホでは1列にする */
+                gap: 20px;
+            }
+        }
+
+        #contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 左右中央揃え */
+        }
+
     </style>
 </head>
 <body>
@@ -81,12 +115,10 @@
 
 <section id="features">
     <h2>教室の特長</h2>
-    <div class="card">
-        <ul>
-            <li><strong>個別指導：</strong>一人ひとりの個性やペースに合わせたオーダーメイドレッスン</li>
-            <li><strong>環境：</strong>一軒家の落ち着いた空間と、本格的なグランドピアノを完備</li>
-            <li><strong>成長の場：</strong>年1回の定期発表会など、成果を披露する場を大切にしています</li>
-        </ul>
+    <div class="grid">
+        <div><strong>01. 個別指導</strong><br>オーダーメイドのカリキュラム</div>
+        <div><strong>02. 環境</strong><br>一軒家の本格的な空間</div>
+        <div><strong>03. 成長</strong><br>年1回の発表会</div>
     </div>
 </section>
 
