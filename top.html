@@ -4,140 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>愛宕ピアノ教室｜福岡市西区の個人ピアノ教室</title>
-    <!-- Google Fonts: 上品なセリフ体と、読みやすいサンセリフ体 -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* 全体：ゆったりとした余白と洗練されたフォント */
+        /* 基本スタイル：全デバイスで崩れないように設定 */
         body {
             font-family: 'Noto Sans JP', sans-serif;
-            line-height: 2.0; /* 行間を広げると洗練されます */
+            line-height: 2.0;
             color: #333;
-            background-color: #f9f7f5; /* NONJOHNに近い淡い紙のような色 */
+            background-color: #f9f7f5;
+            margin: 0;
+            padding: 0;
             letter-spacing: 0.05em;
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3つ横並び */
-            gap: 40px;
-            margin-top: 40px;
-        }
 
+        header { text-align: center; padding: 100px 20px; }
+        header h1 { font-size: 2rem; font-weight: 300; letter-spacing: 0.2em; margin-bottom: 10px; }
 
-        /* ヘッダー：ロゴを際立たせる */
-        header {
-            text-align: center;
-            padding: 120px 20px;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            letter-spacing: 0.2em; /* 文字間隔を広げるとプロっぽくなります */
-        }
-    
-        /* セクション：線で区切らず「余白」で区切る */
-        section {
-            padding: 100px 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        h2 {
-            font-size: 1.5rem;
-            text-align: center;
-            font-weight: 400;
-            margin-bottom: 60px;
-            letter-spacing: 0.1em;
-        }
-    
-        /* カードデザイン：枠線を消してスッキリと */
-        .card {
-            background: transparent; /* 背景色を透明に */
-            padding: 0;
-            box-shadow: none;        /* 影を消す */
-            border-bottom: 1px solid #e0e0e0; /* 下線だけで区切る */
-            padding-bottom: 40px;
-        }
-    
-        /* ボタン：シンプルに */
-        .btn-primary {
-            background: #333; /* 黒に近い色で引き締める */
-            color: #fff;
-            border-radius: 0; /* 角を四角にするのがNONJOHN流 */
-            padding: 15px 40px;
-            max-width: 250px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3つ横並び */
-            gap: 40px;
-            margin-top: 40px;
-        }
+        /* セクション：最大幅を制限して崩れを防ぐ */
+        section { padding: 80px 20px; max-width: 600px; margin: auto; }
         
-        footer {
-            text-align: center;
-            padding: 100px 20px; /* 余白を広げる */
-            border-top: 1px solid #e0e0e0;
-            color: #333;
-        }
-        @media (max-width: 600px) {
-            .grid {
-                grid-template-columns: 1fr; /* スマホでは1列にする */
-                gap: 20px;
-            }
+        h2 { font-size: 1.2rem; text-align: center; font-weight: 400; margin-bottom: 50px; letter-spacing: 0.2em; }
+
+        .card { border-bottom: 1px solid #e0e0e0; padding-bottom: 40px; }
+
+        /* グリッド：スマホで縦並び、PCで横並び */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
 
-        #contact {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* 左右中央揃え */
+        .price-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
+        .price-table th, .price-table td { padding: 12px 0; border-bottom: 1px solid #e0e0e0; text-align: left; }
+
+        .btn-primary { 
+            display: block; background: #333; color: #fff; text-align: center; 
+            padding: 15px; text-decoration: none; max-width: 250px; margin: 40px auto;
         }
 
+        footer { text-align: center; padding: 60px 20px; color: #888; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="card" style="display: inline-block; padding: 20px 40px;">
-        <h1>愛宕ピアノ教室</h1>
-        <p>福岡市西区で心豊かな音楽の時間を。</p>
-    </div>
+    <h1>愛宕ピアノ教室</h1>
+    <p>福岡市西区で心豊かな音楽の時間を。</p>
 </header>
 
 <section id="about">
     <h2>教室について</h2>
     <div class="card">
         <p>「音楽を通じて、心豊かな人生を育む」ことを理念としています。一人ひとりの個性と目標に寄り添い、丁寧な指導を心がけています。</p>
-        <h3 style="margin-top: 30px;">講師：田中 太郎</h3>
-        <p>音楽大学卒業。国内外のコンクールでの受賞歴を活かし、初心者から専門家まで指導しています。</p>
+        <p style="margin-top: 20px;"><strong>講師：田中 太郎</strong><br>音楽大学卒業。国内外のコンクールでの受賞歴を活かし、初心者から専門家まで指導しています。</p>
     </div>
 </section>
 
 <section id="features">
     <h2>教室の特長</h2>
     <div class="grid">
-        <div><strong>01. 個別指導</strong><br>オーダーメイドのカリキュラム</div>
-        <div><strong>02. 環境</strong><br>一軒家の本格的な空間</div>
-        <div><strong>03. 成長</strong><br>年1回の発表会</div>
+        <div><strong>01. 個別指導</strong><br>一人ひとりに合わせたオーダーメイドレッスン</div>
+        <div><strong>02. 環境</strong><br>一軒家の落ち着いた空間とグランドピアノ</div>
+        <div><strong>03. 成長</strong><br>定期発表会で成果を披露</div>
     </div>
 </section>
 
 <section id="lesson">
     <h2>レッスン料金</h2>
     <div class="card">
-        <p style="text-align: center;">入会金：5,000円（税込）</p>
+        <p style="text-align: center; font-size: 0.9rem;">入会金：5,000円（税込）</p>
         <table class="price-table">
-            <tr><th>コース</th><th>時間</th><th>月謝（税込）</th></tr>
-            <tr><td>ピアノ（30分）</td><td>年40回</td><td>7,500円</td></tr>
-            <tr><td>ピアノ（45分）</td><td>年40回</td><td>9,500円</td></tr>
-            <tr><td>幼児音楽</td><td>月3回</td><td>6,000円</td></tr>
+            <tr><th>コース</th><th>月謝（税込）</th></tr>
+            <tr><td>ピアノ（30分・年40回）</td><td>7,500円</td></tr>
+            <tr><td>ピアノ（45分・年40回）</td><td>9,500円</td></tr>
+            <tr><td>幼児音楽（月3回）</td><td>6,000円</td></tr>
         </table>
     </div>
 </section>
 
 <section id="contact">
     <h2>無料体験レッスン</h2>
-    <p style="text-align: center;">まずは実際の雰囲気や講師との相性をご確認ください。</p>
     <a href="YOUR_GOOGLE_FORM_URL" class="btn-primary">体験レッスンに申し込む</a>
 </section>
 
